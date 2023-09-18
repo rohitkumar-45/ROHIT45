@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portal - Event Management System</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn.logout {
+            background-color: #DC3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Portal</h2>
+        <div class="dropdown">
+            <button class="btn">Services</button>
+            <div class="dropdown-content">
+                <a href="#">Catering</a>
+                <a href="#">Florist</a>
+                <a href="#">Decoration</a>
+                <a href="#">Lighting</a>
+            </div>
+        </div>
+        <button class="btn">Welcome User</button>
+        <button class="btn">Vendor</button>
+        <button class="btn">Cart</button>
+        <button class="btn">Guest List</button>
+        <button class="btn">Other Status</button>
+        <a href="logout.html"><button class="btn logout">Logout</button></a>
+    </div>
+</body>
+</html>

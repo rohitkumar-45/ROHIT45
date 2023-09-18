@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page - Event Management System</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn.logout {
+            background-color: #DC3545;
+        }
+        .cart {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px auto;
+            width: 70%;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .cart-item img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 10px;
+        }
+        .quantity-dropdown {
+            width: 50px;
+        }
+        .total-price {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .btn-proceed {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cart Page</h2>
+        <button class="btn">Home</button>
+        <button class="btn">View Product</button>
+        <button class="btn">Request</button>
+        <button class="btn">Product</button>
+        <a href="logout.html"><button class="btn logout">Logout</button></a>
+
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <div class="cart-item">
+                <img src="product1.jpg" alt="Product 1">
+                <p>Name: Product 1</p>
+                <p>Price: $50</p>
+                <select class="quantity-dropdown">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <p>Total: $100</p>
+                <button class="btn-remove">Remove</button>
+            </div>
+            <div class="cart-item">
+                <img src="product2.jpg" alt="Product 2">
+                <p>Name: Product 2</p>
+                <p>Price: $75</p>
+                <select class="quantity-dropdown">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <p>Total: $150</p>
+                <button class="btn-remove">Remove</button>
+            </div>
+            <div class="total-price">
+                <p>Grand Total: $250</p>
+            </div>
+            <button class="btn-proceed">Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .toggle-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-decoration: underline;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div id="admin-login">
+            <form action="admin_login.php" method="post">
+                <label for="admin-username">Admin Username:</label>
+                <input type="text" id="admin-username" name="admin-username" required>
+    
+                <label for="admin-password">Admin Password:</label>
+                <input type="password" id="admin-password" name="admin-password" required>
+    
+                <input type="submit" value="Admin Login">
+            </form>
+        </div>
+        <div id="vendor-login" style="display: none;">
+            <form action="vendor_login.php" method="post">
+                <label for="vendor-username">Vendor Username:</label>
+                <input type="text" id="vendor-username" name="vendor-username" required>
+    
+                <label for="vendor-password">Vendor Password:</label>
+                <input type="password" id="vendor-password" name="vendor-password" required>
+    
+                <input type="submit" value="Vendor Login">
+            </form>
+        </div>
+        <button class="toggle-button" onclick="toggleLoginForm()">Switch to Vendor Login</button>
+    </div>
+
+    <script>
+        function toggleLoginForm() {
+            var adminLogin = document.getElementById("admin-login");
+            var vendorLogin = document.getElementById("vendor-login");
+
+            if (adminLogin.style.display === "none") {
+                adminLogin.style.display = "block";
+                vendorLogin.style.display = "none";
+            } else {
+                adminLogin.style.display = "none";
+                vendorLogin.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page - Event Management System</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn.logout {
+            background-color: #DC3545;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .product-price {
+            margin-top: 10px;
+        }
+        .btn.add-to-cart {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Products Page</h2>
+        <button class="btn">Home</button>
+        <button class="btn">Vendor Name</button>
+        <a href="logout.html"><button class="btn logout">Logout</button></a>
+
+        <div class="product">
+            <h3>Product 1</h3>
+            <p class="product-price">Price: $10</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>Product 2</h3>
+            <p class="product-price">Price: $15</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>Product 3</h3>
+            <p class="product-price">Price: $20</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>Product 4</h3>
+            <p class="product-price">Price: $25</p>
+            <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>

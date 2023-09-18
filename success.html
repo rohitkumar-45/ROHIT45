@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page - Event Management System</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn-success {
+            background-color: #28a745;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Success Page</h2>
+        <button class="btn btn-success" id="totalAmount">Total Amount</button>
+        <button class="btn btn-success" id="name">Name</button>
+        <button class="btn btn-success" id="number">Number</button>
+        <button class="btn btn-success" id="email">Email</button>
+        <button class="btn btn-success" id="paymentMethod">Payment Method</button>
+        <button class="btn btn-success" id="address">Address</button>
+        <button class="btn btn-success" id="state">State</button>
+        <button class="btn btn-success" id="city">City</button>
+        <button class="btn btn-success" id="pincode">Pincode</button>
+        <button class="btn btn-success" id="continueShopping">Continue Shopping</button>
+    </div>
+
+    <!-- Popup for "Thank You" message -->
+    <div class="popup" id="thankYouPopup">
+        <h3>Thank You for Your Order!</h3>
+        <p>Your order has been successfully placed.</p>
+        <button class="btn btn-success" id="closePopup">Close</button>
+    </div>
+
+    <script>
+        // Function to show the "Thank You" popup
+        function showThankYouPopup() {
+            document.getElementById("thankYouPopup").style.display = "block";
+        }
+
+        // Function to close the "Thank You" popup
+        function closeThankYouPopup() {
+            document.getElementById("thankYouPopup").style.display = "none";
+        }
+
+        // Attach event listeners to the buttons
+        document.getElementById("totalAmount").addEventListener("click", showThankYouPopup);
+        document.getElementById("name").addEventListener("click", showThankYouPopup);
+        document.getElementById("number").addEventListener("click", showThankYouPopup);
+        document.getElementById("email").addEventListener("click", showThankYouPopup);
+        document.getElementById("paymentMethod").addEventListener("click", showThankYouPopup);
+        document.getElementById("address").addEventListener("click", showThankYouPopup);
+        document.getElementById("state").addEventListener("click", showThankYouPopup);
+        document.getElementById("city").addEventListener("click", showThankYouPopup);
+        document.getElementById("pincode").addEventListener("click", showThankYouPopup);
+        document.getElementById("continueShopping").addEventListener("click", closeThankYouPopup);
+        document.getElementById("closePopup").addEventListener("click", closeThankYouPopup);
+    </script>
+</body>
+</html>
